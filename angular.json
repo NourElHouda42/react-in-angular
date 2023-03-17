@@ -30,7 +30,10 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/app/RichTextEditor/RichTextEditor/RichTextEditor.scss",
+              "src/app/RichTextEditor/RichTextEditorStyleButton/RichTextEditorStyleButton.scss",
+              "src/app/RichTextEditor/RichTextEditorInlineStyleControls/RichTextEditorInlineStyleControls.scss"
             ],
             "scripts": []
           },
