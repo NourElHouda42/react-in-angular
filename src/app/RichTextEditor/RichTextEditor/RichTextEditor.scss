@@ -1,0 +1,66 @@
+.RichEditor-root {
+  background: #fff;
+  border: 0.0625rem solid rgba(201, 204, 207, 1);
+  border-top-color: rgba(174, 180, 185, 1);
+  border-radius: 0.25rem;
+  font-family: 'Georgia', serif;
+  font-size: 14px;
+  padding: 15px;
+  position: relative;
+
+  &.focused::after {
+    position: absolute;
+    content: '';
+    top: -0.125rem;
+    right: -0.125rem;
+    bottom: -0.125rem;
+    left: -0.125rem;
+    display: block;
+    pointer-events: none;
+    box-shadow: 0 0 0 0.125rem #458fff;
+    transition: box-shadow 100ms cubic-bezier(0.25,0.1,0.25,1);
+    border-radius: calc(0.25rem + 0.0625rem);
+  }
+}
+
+.RichEditor-editor {
+  border-top: 1px solid #ddd;
+  cursor: text;
+  font-size: 16px;
+  margin-top: 10px;
+
+  .public-DraftEditorPlaceholder-root,
+  .public-DraftEditor-content {
+    margin: 0 -15px -15px;
+    padding: 15px;
+  }
+
+  .public-DraftEditor-content {
+    min-height: 100px;
+    figure {
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+
+  .RichEditor-blockquote {
+    border-left: 5px solid #eee;
+    color: #666;
+    font-family: 'Hoefler Text', 'Georgia', serif;
+    font-style: italic;
+    margin: 16px 0;
+    padding: 10px 20px;
+  }
+
+  .public-DraftStyleDefault-pre {
+    background-color: rgba(0, 0, 0, 0.05);
+    font-family: 'Inconsolata', 'Menlo', 'Consolas', monospace;
+    font-size: 16px;
+    padding: 20px;
+  }
+}
+
+.RichEditor-hidePlaceholder .public-DraftEditorPlaceholder-root {
+  display: none;
+}
